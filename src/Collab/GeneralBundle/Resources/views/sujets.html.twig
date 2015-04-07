@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <ul>
+    {% for sujet in sujets %}
+
+    <li>
+         {{ sujet.name }} <a href="{{ path('collab_general_acceuil_sujetsdescription',{'id': sujet.id}) }}">learn more</a>
+    </li>
+
+
+
+    {% endfor %}
+    </ul>
+
+{% endblock %}
